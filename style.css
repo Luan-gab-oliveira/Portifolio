@@ -63,12 +63,12 @@ body{
 
 #nome:hover {
   font-weight: bold;
-  background: linear-gradient(90deg, transparent, #2469AB, #2e89df);
+  background: linear-gradient(90deg, transparent, #2469AB, transparent);
   background-size: 200% auto;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: shimmer 2s linear infinite;
+  animation: shimmer 3s linear infinite;
 }
 
 @keyframes shimmer {
@@ -113,10 +113,20 @@ body{
   color: inherit;
 }
 
+#sobre img, #intro img{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .card {
   height: 400px;
   min-width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, #sobre img:hover, #intro img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(68, 68, 68, 0.3);
+  z-index: 2;
 }
 
 .card p {
@@ -129,16 +139,8 @@ body{
   -webkit-box-orient: vertical;
 }
 
-
-
 .card img{
   height: 200px;
-}
-
-.card:hover, #sobre img:hover, #intro img:hover{
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(68, 68, 68, 0.3);
-  z-index: 2;
 }
 
 #contato i:hover{
