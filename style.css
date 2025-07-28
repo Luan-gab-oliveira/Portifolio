@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #121217;
+}
+
+.navbar{
+  background-color: #121217;
+}
+
+.nav-link{
+    font-weight: 500;
+}
+
+.nav-link:hover{
+    color: #2469AB;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2469AB, transparent);
+  background-size: 300% 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 3px;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+  animation: shimmer111 2s linear infinite !important;
+}
+
+@keyframes shimmer111 {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.imgs{
+  height: 18vw;
+  border-radius: 50%;
+  /* border: solid 2px;
+  border-color: #313d49; */
+}
+
+#nome:hover {
+  font-weight: bold;
+  background: linear-gradient(90deg, transparent, #2469AB, #2e89df);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.pTexto{
+  text-align: justify;
+}
+
+.subtitulo-section{
+  margin-bottom: 60px;
+}
+
+.bloco-sobre{
+  margin-bottom: 70px;
+}
+
+.hero-section {
+  background-color: #2c2f36;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.link-projeto, .link-projeto:hover, .link-projeto:active{
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  height: 400px;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card p {
+  text-align: justify;
+  max-height: 100px; /* Ajuste conforme necessário */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Número de linhas antes de cortar */
+  -webkit-box-orient: vertical;
+}
+
+
+
+.card img{
+  height: 200px;
+}
+
+.card:hover, #sobre img:hover, #intro img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(68, 68, 68, 0.3);
+  z-index: 2;
+}
+
+#contato i:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+#contato a, #contato a:hover, #contato a:active{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@media (max-width: 900px) {
+  .imgs{
+    height: 200px;
+    margin-bottom: 30px;
+  }
+
+  #sobre .col-img{
+    display: none;
+  }
+}
