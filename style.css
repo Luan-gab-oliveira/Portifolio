@@ -143,6 +143,26 @@ body{
   height: 200px;
 }
 
+#blocoFormContato{
+  margin-bottom: 80px;
+}
+
+#blocoFormContato input, #blocoFormContato textarea{
+  background-color: #CED4DA;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+#blocoFormContato button{
+  border: none;
+  background-color: #2469AB;
+}
+
+#blocoFormContato button:hover{
+  background-color: #6c757d;
+}
+
 #contato i:hover{
   cursor: pointer;
   transform: scale(1.5);
@@ -152,6 +172,7 @@ body{
   text-decoration: none;
   color: inherit;
 }
+
 
 
 @media (max-width: 900px) {
